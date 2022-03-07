@@ -13,12 +13,9 @@ feature frac {
     sub fraction by fraction.frac;
 } frac;
 
-include(../../features/small_caps.fea);
 include(../../features/ligatures.fea);
 include(../../features/figure_casing.fea);
 include(../../features/figure_spacing.fea);
-
-include(kerning.fea);
 
 feature numr {
     sub @figures by @figures_numr;
@@ -29,4 +26,338 @@ feature dnom {
     sub @figures by @figures_dnom;
     sub @figures_lining by @figures_dnom;
 } dnom;
+
+feature kern {
+# The kerning for the Roman font is based on the original ET Book
+# metrics for the font with lining figures (LF), not the one with
+# old-style figures (OSF). The LF file had far more kerning pairs, in
+# some cases duplicates of those in the OSF file, but in other cases
+# the same pairs were there for what should be identical characters,
+# with different values. The differing values are noted in comments
+# next to each pair that differs. Pairs with no such comment either
+# had an identical value in both versions, or weren't present in the
+# OSF version. The exception is i o, which was in the OSF file but not
+# the LF one.
+
+    position space A -7;
+    position space C -13;
+    position space M -7;
+    position space N -7;
+    position space Q -10;
+    position space S -7;
+    position space T -33;
+    position space U -13;
+    position space V -40;
+    position space W -23;
+    position space X -20;
+    position space Y -53;
+    position space Z -20;
+    position hyphen zero.lining 19;
+    position hyphen one.lining -81;
+    position hyphen two.lining -43;
+    position hyphen three.lining -46;
+    position hyphen five.lining -31;
+    position hyphen seven.lining -23;
+    position hyphen nine.lining -20;
+    position seven four -38;
+    position one.lining hyphen -46;
+    position four.lining hyphen 27;
+    position seven.lining hyphen -54;
+    position A d -20;
+    position A v -72;
+    position A w -68;
+    position R o -23;
+    position R u -17;
+    position T a -57; # OSF: -60
+    position T c -47;
+    position T d -60; # OSF: -47 (!)
+    position T e -57;
+    position T g -37;
+    position T m -50; # OSF: -63
+    position T n -27; # OSF: -53
+    position T o -70;
+    position T p -37;
+    position T q -57;
+    position T r -30;
+    position T s -33; # OSF: -20
+    position T u -80; # OSF: -60
+    position T v -66;
+    position T w -83;
+    position T x -47;
+    position T y -60;
+    position T z -27;
+    position U a -36;
+    position U e -32;
+    position U n -24;
+    position U t -16;
+    position V comma -90;
+    position V a -113;
+    position V c -110;
+    position V d -113;
+    position V e -96;
+    position V f -27;
+    position V g -96;
+    position V i -13;
+    position V m -106;
+    position V n -90;
+    position V o -96;
+    position V p -90;
+    position V q -93;
+    position V r -66;
+    position V s -53;
+    position V t -47;
+    position V u -80;
+    position V v -76;
+    position V w -66;
+    position V x -83;
+    position V y -60;
+    position V z -73;
+    position W comma -68;
+    position W period -72;
+    position W a -92;
+    position W c -84;
+    position W d -96;
+    position W e -120;
+    position W g -116;
+    position W i -10;
+    position W m -52;
+    position W n -52;
+    position W o -83;
+    position W p -83;
+    position W q -76;
+    position W r -43;
+    position W t -40;
+    position W u -86;
+    position W v -88;
+    position W w -80;
+    position W x -56;
+    position W y -80;
+    position W z -56;
+    position Y a -93; # OSF: -79
+    position Y c -83;
+    position Y d -86;
+    position Y e -76; # OSF: -89
+    position Y g -83;
+    position Y m -60;
+    position Y n -53;
+    position Y o -86; # OSF: -109
+    position Y p -70;
+    position Y q -66;
+    position Y r -27;
+    position Y s -50;
+    position Y t -20; # OSF: -47
+    position Y u -76; # OSF: -66
+    position Y v -76; # OSF: -53
+    position Y w -53; # OSF: -50
+    position Y x -57;
+    position Y y -50; # OSF: -63
+    position i o -20; # from OSF, not in LF
+    position z f 20;
+
+    position a.sc j.sc -27;
+    position a.sc n.sc -6;
+    position a.sc o.sc -12;
+    position a.sc r.sc -13;
+    position a.sc s.sc -27;
+    position a.sc t.sc -33;
+    position a.sc u.sc -50;
+    position b.sc a.sc -18;
+    position b.sc j.sc -20;
+    position b.sc n.sc -20;
+    position b.sc y.sc -24;
+    position c.sc v.sc -7;
+    position d.sc a.sc -24;
+    position d.sc f.sc -20;
+    position d.sc i.sc -18;
+    position d.sc m.sc -31;
+    position d.sc w.sc -68;
+    position e.sc a.sc -3;
+    position e.sc r.sc 3;
+    position f.sc a.sc -24;
+    position f.sc g.sc -13;
+    position i.sc e.sc 13;
+    position i.sc o.sc -13;
+    position l.sc a.sc -33;
+    position l.sc y.sc -53;
+    position o.sc a.sc -30;
+    position o.sc k.sc -18;
+    position o.sc n.sc -20;
+    position o.sc p.sc -30;
+    position o.sc r.sc -13;
+    position o.sc v.sc -47;
+    position p.sc a.sc -60;
+    position p.sc ae.sc -20;
+    position q.sc a.sc -24;
+    position q.sc w.sc -73;
+    position r.sc a.sc -39;
+    position r.sc d.sc -18;
+    position r.sc e.sc -18;
+    position r.sc f.sc -13;
+    position r.sc j.sc -20;
+    position r.sc o.sc -42;
+    position r.sc s.sc -32;
+    position r.sc t.sc -93;
+    position r.sc u.sc -18;
+    position r.sc y.sc -73;
+    position s.sc a.sc -6;
+    position t.sc a.sc -48;
+    position t.sc y.sc -7;
+    position u.sc a.sc -58;
+    position u.sc h.sc -18;
+    position v.sc a.sc -42;
+    position v.sc ae.sc -27;
+    position w.sc a.sc -110;
+    position w.sc c.sc -42;
+    position w.sc e.sc -13;
+    position w.sc o.sc -27;
+    position w.sc s.sc -38;
+    position w.sc ae.sc -30;
+    position x.sc c.sc -47;
+    position x.sc y.sc -6;
+    position y.sc a.sc -70;
+    position y.sc o.sc -40;
+    position y.sc ae.sc -7;
+    position z.sc w.sc -33;
+} kern;
+
+feature smcp {
+# automatic
+sub yacute by yacute.sc;
+sub thorn by thorn.sc;
+sub a by a.sc;
+sub b by b.sc;
+sub c by c.sc;
+sub d by d.sc;
+sub e by e.sc;
+sub f by f.sc;
+sub g by g.sc;
+sub h by h.sc;
+sub i by i.sc;
+sub j by j.sc;
+sub k by k.sc;
+sub l by l.sc;
+sub m by m.sc;
+sub n by n.sc;
+sub o by o.sc;
+sub p by p.sc;
+sub q by q.sc;
+sub r by r.sc;
+sub s by s.sc;
+sub t by t.sc;
+sub u by u.sc;
+sub v by v.sc;
+sub w by w.sc;
+sub x by x.sc;
+sub y by y.sc;
+sub z by z.sc;
+sub aacute by aacute.sc;
+sub agrave by agrave.sc;
+sub acircumflex by acircumflex.sc;
+sub adieresis by adieresis.sc;
+sub atilde by atilde.sc;
+sub aring by aring.sc;
+sub aogonek by aogonek.sc;
+sub ccedilla by ccedilla.sc;
+sub eacute by eacute.sc;
+sub egrave by egrave.sc;
+sub ecircumflex by ecircumflex.sc;
+sub edieresis by edieresis.sc;
+sub iacute by iacute.sc;
+sub igrave by igrave.sc;
+sub icircumflex by icircumflex.sc;
+sub idieresis by idieresis.sc;
+sub ntilde by ntilde.sc;
+sub oacute by oacute.sc;
+sub ograve by ograve.sc;
+sub ocircumflex by ocircumflex.sc;
+sub odieresis by odieresis.sc;
+sub otilde by otilde.sc;
+sub uacute by uacute.sc;
+sub ugrave by ugrave.sc;
+sub ucircumflex by ucircumflex.sc;
+sub udieresis by udieresis.sc;
+sub ae by ae.sc;
+sub oslash by oslash.sc;
+sub oe by oe.sc;
+sub ydieresis by ydieresis.sc;
+} smcp;
+
+feature c2sc {
+sub Yacute by yacute.sc;
+sub Thorn by thorn.sc;
+sub A by a.sc;
+sub B by b.sc;
+sub C by c.sc;
+sub D by d.sc;
+sub E by e.sc;
+sub F by f.sc;
+sub G by g.sc;
+sub H by h.sc;
+sub I by i.sc;
+sub J by j.sc;
+sub K by k.sc;
+sub L by l.sc;
+sub M by m.sc;
+sub N by n.sc;
+sub O by o.sc;
+sub P by p.sc;
+sub Q by q.sc;
+sub R by r.sc;
+sub S by s.sc;
+sub T by t.sc;
+sub U by u.sc;
+sub V by v.sc;
+sub W by w.sc;
+sub X by x.sc;
+sub Y by y.sc;
+sub Z by z.sc;
+sub Adieresis by adieresis.sc;
+sub Aring by aring.sc;
+sub Aogonek by aogonek.sc;
+sub Ccedilla by ccedilla.sc;
+sub Eacute by eacute.sc;
+sub Ntilde by ntilde.sc;
+sub Odieresis by odieresis.sc;
+sub Udieresis by udieresis.sc;
+sub AE by ae.sc;
+sub Oslash by oslash.sc;
+sub Agrave by agrave.sc;
+sub Atilde by atilde.sc;
+sub Otilde by otilde.sc;
+sub OE by oe.sc;
+sub Ydieresis by ydieresis.sc;
+sub Acircumflex by acircumflex.sc;
+sub Ecircumflex by ecircumflex.sc;
+sub Aacute by aacute.sc;
+sub Edieresis by edieresis.sc;
+sub Egrave by egrave.sc;
+sub Iacute by iacute.sc;
+sub Icircumflex by icircumflex.sc;
+sub Idieresis by idieresis.sc;
+sub Igrave by igrave.sc;
+sub Oacute by oacute.sc;
+sub Ocircumflex by ocircumflex.sc;
+sub Ograve by ograve.sc;
+sub Uacute by uacute.sc;
+sub Ucircumflex by ucircumflex.sc;
+sub Ugrave by ugrave.sc;
+
+    sub \exclam by \exclam.csc;
+    sub \dollar by \dollar.csc;
+    sub \percent by \percent.csc;
+    sub \ampersand by \ampersand.csc;
+    sub \parenleft by \parenleft.csc;
+    sub \parenright by \parenright.csc;
+    sub \asterisk by \asterisk.csc;
+    sub \less by \less.csc;
+    sub \equal by \equal.csc;
+    sub \greater by \greater.csc;
+    sub \question by \question.csc;
+    sub \braceleft by \braceleft.csc;
+    sub \braceright by \braceright.csc;
+    sub \asciitilde by \asciitilde.csc;
+    sub \dagger by \dagger.csc;
+    sub \paragraph by \paragraph.csc;
+    sub \perthousand by \perthousand.csc;
+} c2sc;
 

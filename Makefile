@@ -1,5 +1,4 @@
 .PHONY: all clean test psautohint otf ttf woff woff2
-ALL_PSAUTOHINTS = $(patsubst ufo/%.ufo,build/psautohint/%.ufo,$(wildcard ufo/*.ufo))
 ALL_OTFS = $(patsubst ufo/%.ufo,build/otf/%.otf,$(wildcard ufo/*.ufo))
 ALL_TTFS = $(patsubst ufo/%.ufo,build/ttf/%.ttf,$(wildcard ufo/*.ufo))
 ALL_WOFFS = $(patsubst ufo/%.ufo,build/woff/%.woff,$(wildcard ufo/*.ufo))
@@ -7,7 +6,6 @@ ALL_WOFF2S = $(patsubst ufo/%.ufo,build/woff2/%.woff2,$(wildcard ufo/*.ufo))
 
 all: ${ALL_OTFS} ${ALL_TTFS} ${ALL_WOFFS} ${ALL_WOFF2S}
 
-psautohint: ${ALL_PSAUTOHINTS}
 otf: ${ALL_OTFS}
 woff: ${ALL_WOFFS}
 woff2: ${ALL_WOFF2S}
@@ -17,8 +15,6 @@ clean:
 
 build:
 	mkdir -p build
-build/psautohint: | build
-	mkdir -p build/psautohint
 build/otf: | build
 	mkdir -p build/otf
 build/ttf: | build
@@ -28,12 +24,8 @@ build/woff: | build
 build/woff2: | build
 	mkdir -p build/woff2
 
-build/psautohint/%.ufo: ufo/%.ufo ufo/%.ufo/* | build/psautohint
-	rm -rf $@
-	psautohint -o $@ $<
-
-build/otf/%.otf: build/psautohint/%.ufo | build/otf
-	makeotf -r -f $< -o build/otf/
+build/otf/%.otf: ufo/%.ufo ufo/%.ufo/* | build/otf
+	makeotf -nshw -r -f $< -o build/otf/
 
 build/ttf/%.ttf: build/otf/%.otf | build/ttf
 	otf2ttf -o /dev/stdout $< | ttfautohint /dev/stdin $@
