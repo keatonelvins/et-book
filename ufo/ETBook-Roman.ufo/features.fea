@@ -361,3 +361,11 @@ sub Ugrave by ugrave.sc;
     sub \perthousand by \perthousand.csc;
 } c2sc;
 
+
+table OS/2 {
+    FSType 0;
+} OS/2;
+
+table name {
+    nameid 0 "ETBembo designed for Edward Tufte / Graphics Press (c) 2002 Dmitry Krasny / Deka Design";
+} name;

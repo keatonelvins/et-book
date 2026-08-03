@@ -7,7 +7,7 @@
 	<key>capHeight</key>
 	<integer>0</integer>
 	<key>copyright</key>
-	<string>ETBembo designed for Eward Tufte / Graphics Press \(c\) 2002 Dmitry Krasny / Deka Design</string>
+	<string>ETBembo designed for Edward Tufte / Graphics Press \(c\) 2002 Dmitry Krasny / Deka Design</string>
 	<key>descender</key>
 	<integer>0</integer>
 	<key>familyName</key>
@@ -16,6 +16,8 @@
 	<string>2022/03/07 08:43:10</string>
 	<key>openTypeNamePreferredSubfamilyName</key>
 	<string>Roman</string>
+	<key>openTypeOS2Type</key>
+	<array/>
 	<key>openTypeOS2WeightClass</key>
 	<integer>400</integer>
 	<key>openTypeOS2WidthClass</key>

@@ -1,2 +1,10 @@
 include(../../features/ligatures.fea);
 include(kerning.fea);
+
+table OS/2 {
+    FSType 0;
+} OS/2;
+
+table name {
+    nameid 0 "ETBembo designed for Edward Tufte / Graphics Press (c) 2002 Dmitry Krasny / Deka Design";
+} name;

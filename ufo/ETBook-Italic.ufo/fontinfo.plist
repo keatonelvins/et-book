@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>copyright</key>
-    <string>ETBembo Italic designed for Eward Tufte / Graphics Press \(c\) 2004 Dmitry Krasny / Deka Design</string>
+    <string>ETBembo Italic designed for Edward Tufte / Graphics Press \(c\) 2004 Dmitry Krasny / Deka Design</string>
     <key>familyName</key>
     <string>ETBook</string>
     <key>styleName</key>
@@ -16,6 +16,8 @@
     <array/>
     <key>italicAngle</key>
     <integer>0</integer>
+    <key>openTypeOS2Type</key>
+    <array/>
     <key>postscriptBlueFuzz</key>
     <integer>1</integer>
     <key>postscriptBlueScale</key>
