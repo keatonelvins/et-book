@@ -2,7 +2,15 @@
 
 An OpenType version of the typeface used in Edward Tufte’s [books][], from the open-source release of the typeface at [edwardtufte/et-book][orig].
 
-> **This fork** ([keatonelvins/et-book](https://github.com/keatonelvins/et-book)) of [dpk/et-book](https://github.com/dpk/et-book) additionally fixes the ‡, ‹ and › characters, which rendered as ff/ffi/ffl ligatures in the original fonts (dpk/et-book#17, edwardtufte/et-book#27), sets the OS/2 `fsType` to “no embedding restrictions”, corrects the copyright metadata, and ships prebuilt fonts in [`dist/`](dist/) (WOFF2 for the web, OTF for desktop use).
+> **This fork** ([keatonelvins/et-book](https://github.com/keatonelvins/et-book)) of [dpk/et-book](https://github.com/dpk/et-book) additionally:
+>
+> * fixes the ‡, ‹ and › characters, which rendered as ff/ffi/ffl ligatures in the original fonts (dpk/et-book#17, edwardtufte/et-book#27);
+> * extends language support: full Polish, Czech, Slovak, Hungarian, Croatian, Maltese and Lithuanian in all four shipped faces (ogonek letters ą ę į ų are Roman-only so far — their tails are drawn, not composed), built from dpk’s draft glyphs plus compositions that follow the font’s own accent-placement conventions (see `tools/compose_accents.py`);
+> * repairs the font metadata: a proper family model (“ET Book” Regular/Italic/Bold with Semibold tied in via typographic-family records), real bold/italic style linking, correct italic angles, harmonized vertical metrics across faces, `fsType` 0 (no embedding restrictions), corrected copyright strings, and version 2.000 (see `tools/postprocess.py`, applied automatically by the Makefile);
+> * restores working PostScript alignment zones and stem widths measured from the actual outlines (the inherited values missed the letterforms entirely), and hints the OTFs with `otfautohint`;
+> * ships prebuilt fonts in [`dist/`](dist/) — WOFF2 for the web with a ready-made [`et-book.css`](dist/et-book.css), OTF for desktop — and a [specimen page](docs/index.html) in `docs/`.
+>
+> To build: `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && make otf ttf woff2` (needs `ttfautohint` and `woff2` from your system package manager). The Display Italic stays buildable from source but is not shipped, as there is no Display Roman to pair it with.
 
 [books]: https://www.edwardtufte.com/tufte/books_vdqi
 [orig]: https://github.com/edwardtufte/et-book

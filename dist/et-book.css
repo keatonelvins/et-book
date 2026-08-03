@@ -1,0 +1,41 @@
+/* ET Book — drop-in @font-face kit.
+ *
+ * Usage:  <link rel="stylesheet" href="et-book.css">
+ *         body { font-family: "ET Book", Georgia, serif; }
+ *
+ * Real bold and italic faces are wired to the standard weight/style
+ * axes, so <b>, <i>, font-weight: 600/700 and font-style: italic all
+ * select actual fonts instead of synthesized ones.
+ */
+
+@font-face {
+    font-family: "ET Book";
+    src: url("woff2/ETBook-Roman.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ET Book";
+    src: url("woff2/ETBook-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ET Book";
+    src: url("woff2/ETBook-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ET Book";
+    src: url("woff2/ETBook-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

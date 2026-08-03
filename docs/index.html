@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ET Book — specimen</title>
+<style>
+@font-face {
+    font-family: "ET Book";
+    src: url("fonts/ETBook-Roman.woff2") format("woff2");
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "ET Book";
+    src: url("fonts/ETBook-Italic.woff2") format("woff2");
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: "ET Book";
+    src: url("fonts/ETBook-Semibold.woff2") format("woff2");
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "ET Book";
+    src: url("fonts/ETBook-Bold.woff2") format("woff2");
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+
+:root {
+    --ink: #111;
+    --faint: #666;
+    --rule: #ddd;
+    --paper: #fffff8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { background: var(--paper); }
+body {
+    font-family: "ET Book", Georgia, serif;
+    color: var(--ink);
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    line-height: 1.45;
+    font-size: 1.125rem;
+}
+h1 {
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: .4rem;
+}
+.subtitle { font-style: italic; color: var(--faint); margin-bottom: 3rem; }
+section { margin-top: 3rem; }
+h2 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.35rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: .25rem;
+    margin-bottom: 1rem;
+}
+p + p { margin-top: .7em; }
+.styles div { font-size: 1.6rem; line-height: 1.6; }
+.sc { font-variant: small-caps; letter-spacing: .03em; }
+.osf { font-variant-numeric: oldstyle-nums; }
+.lf  { font-variant-numeric: lining-nums; }
+.frac { font-variant-numeric: diagonal-fractions; }
+.big { font-size: 2.6rem; line-height: 1.35; }
+.waterfall p { line-height: 1.3; margin: .35em 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.label {
+    font-size: .8rem;
+    color: var(--faint);
+    font-style: italic;
+    display: inline-block;
+    min-width: 5.5rem;
+}
+table { border-collapse: collapse; width: 100%; }
+td { padding: .3em .8em .3em 0; vertical-align: baseline; }
+td:first-child { color: var(--faint); font-style: italic; font-size: .9rem; white-space: nowrap; }
+footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: .9rem;
+    color: var(--faint);
+}
+a { color: inherit; }
+</style>
+</head>
+<body>
+
+<h1>ET Book</h1>
+<p class="subtitle">the Bembo-like typeface of Edward Tufte’s books, as an OpenType family</p>
+
+<p>ET Book was designed by Dmitry Krasny, Bonnie Scranton, and Edward Tufte,
+and used to set <i>The Visual Display of Quantitative Information</i>,
+<i>Envisioning Information</i>, <i>Visual Explanations</i>, and
+<i>Beautiful Evidence</i>. This version descends from
+<a href="https://github.com/dpk/et-book">Daphne Preston-Kendal’s OpenType
+conversion</a> of the original PostScript fonts, with repaired punctuation,
+extended language support, and modern font metadata.</p>
+
+<section class="styles">
+<h2>Styles</h2>
+<div>The quick brown fox jumps over the lazy dog</div>
+<div style="font-style: italic">The quick brown fox jumps over the lazy dog</div>
+<div style="font-weight: 600">The quick brown fox jumps over the lazy dog</div>
+<div style="font-weight: 700">The quick brown fox jumps over the lazy dog</div>
+<div class="sc">The quick brown fox jumps over the lazy dog</div>
+</section>
+
+<section>
+<h2>OpenType features</h2>
+<table>
+<tr><td>small caps</td><td><span class="sc">Chapter Seven: Visual Explanations</span></td></tr>
+<tr><td>old-style figures</td><td class="osf">0123456789 — set in 1786, printed in 2026</td></tr>
+<tr><td>lining figures</td><td class="lf">0123456789 — SET IN 1786, PRINTED IN 2026</td></tr>
+<tr><td>fractions</td><td class="frac">1/2 and 3/4 and 21/32</td></tr>
+<tr><td>ligatures</td><td>waffle, field, floral, affluent, offices, fjord</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Once-lost characters, restored</h2>
+<p class="big">‡ &nbsp; ‹quoted› &nbsp; «quoted»</p>
+<p>The original PostScript fonts had replaced the double dagger and the
+single guillemets with extra ligature outlines, so ‡ rendered as “ff” and
+‹ › as “ffi” and “ffl”. They are drawn again in every weight and style.</p>
+</section>
+
+<section>
+<h2>Language support</h2>
+<table>
+<tr><td>Polish</td><td>Zażółć gęślą jaźń — pchnąć w tę łódź jeża lub ośm skrzyń fig</td></tr>
+<tr><td>Czech</td><td>Příliš žluťoučký kůň úpěl ďábelské ódy</td></tr>
+<tr><td>Slovak</td><td>Kŕdeľ šťastných ďatľov učí koňa obhrýzať kôru</td></tr>
+<tr><td>Lithuanian</td><td>Įlinkdama fechtuotojo špaga sublykčiojusi pragręžė apvalų arbūzą</td></tr>
+<tr><td>Hungarian</td><td>Jó foxim és don Quijote húszwattos lámpánál ülve egy pár bűvös cipőt készít</td></tr>
+<tr><td>Maltese</td><td>Ħadd ma jħobb il-ħobż aħjar minn ħabibna Ħamża</td></tr>
+<tr><td>Croatian</td><td>Gojazni đačić s biciklom drži hmelj i finu vatu u džepu nošnje</td></tr>
+<tr><td>French</td><td>Portez ce vieux whisky au juge blond qui fume — « déjà vu », ‹ à propos ›</td></tr>
+<tr><td>German</td><td>Zwölf Boxkämpfer jagen Viktor quer über den großen Sylter Deich</td></tr>
+</table>
+</section>
+
+<section class="waterfall">
+<h2>Waterfall</h2>
+<p style="font-size: 12px"><span class="label">12 px</span> Truth is ever to be found in simplicity, and not in the multiplicity of things</p>
+<p style="font-size: 14px"><span class="label">14 px</span> Truth is ever to be found in simplicity, and not in the multiplicity of things</p>
+<p style="font-size: 16px"><span class="label">16 px</span> Truth is ever to be found in simplicity, and not in the multiplicity</p>
+<p style="font-size: 18px"><span class="label">18 px</span> Truth is ever to be found in simplicity, and not in the</p>
+<p style="font-size: 22px"><span class="label">22 px</span> Truth is ever to be found in simplicity</p>
+<p style="font-size: 28px"><span class="label">28 px</span> Truth is ever to be found</p>
+</section>
+
+<footer>
+<p>ET Book is MIT-licensed. Fonts, sources, and a ready-made CSS kit:
+<a href="https://github.com/keatonelvins/et-book">github.com/keatonelvins/et-book</a>.
+Converted and improved by Daphne Preston-Kendal; original webfont release by
+Adam Schwartz.</p>
+</footer>
+
+</body>
+</html>
