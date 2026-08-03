@@ -2,6 +2,8 @@
 
 An OpenType version of the typeface used in Edward Tufte’s [books][], from the open-source release of the typeface at [edwardtufte/et-book][orig].
 
+> **This fork** ([keatonelvins/et-book](https://github.com/keatonelvins/et-book)) of [dpk/et-book](https://github.com/dpk/et-book) additionally fixes the ‡, ‹ and › characters, which rendered as ff/ffi/ffl ligatures in the original fonts (dpk/et-book#17, edwardtufte/et-book#27), sets the OS/2 `fsType` to “no embedding restrictions”, corrects the copyright metadata, and ships prebuilt fonts in [`dist/`](dist/) (WOFF2 for the web, OTF for desktop use).
+
 [books]: https://www.edwardtufte.com/tufte/books_vdqi
 [orig]: https://github.com/edwardtufte/et-book
 

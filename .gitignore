@@ -149,3 +149,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Prebuilt fonts shipped by this fork (exceptions to the build/otf rules above)
+!dist/
+!dist/otf/
+!dist/woff2/
+!dist/**
