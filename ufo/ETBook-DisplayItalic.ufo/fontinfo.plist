@@ -11,25 +11,25 @@
     <key>guidelines</key>
     <array/>
     <key>italicAngle</key>
-    <integer>0</integer>
+    <integer>-12</integer>
     <key>openTypeOS2Type</key>
     <array/>
     <key>postscriptBlueFuzz</key>
-    <integer>1</integer>
+    <integer>0</integer>
     <key>postscriptBlueScale</key>
-    <real>0.04815</real>
+    <real>0.039625</real>
     <key>postscriptBlueShift</key>
     <integer>7</integer>
     <key>postscriptBlueValues</key>
     <array>
-      <integer>-22</integer>
-      <integer>-1</integer>
-      <integer>427</integer>
-      <integer>430</integer>
-      <integer>644</integer>
-      <integer>664</integer>
-      <integer>753</integer>
-      <integer>758</integer>
+      <integer>-12</integer>
+      <integer>0</integer>
+      <integer>429</integer>
+      <integer>443</integer>
+      <integer>646</integer>
+      <integer>662</integer>
+      <integer>755</integer>
+      <integer>776</integer>
     </array>
     <key>postscriptFamilyBlues</key>
     <array/>
@@ -43,13 +43,19 @@
     <string>ETBook Display Italic</string>
     <key>postscriptOtherBlues</key>
     <array>
-      <integer>-275</integer>
+      <integer>-276</integer>
       <integer>-272</integer>
     </array>
     <key>postscriptStemSnapH</key>
-    <array/>
+    <array>
+      <integer>43</integer>
+      <integer>53</integer>
+    </array>
     <key>postscriptStemSnapV</key>
-    <array/>
+    <array>
+      <integer>66</integer>
+      <integer>69</integer>
+    </array>
     <key>postscriptUnderlinePosition</key>
     <integer>-111</integer>
     <key>postscriptUnderlineThickness</key>

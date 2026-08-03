@@ -5,11 +5,11 @@
 	<key>ascender</key>
 	<integer>800</integer>
 	<key>capHeight</key>
-	<integer>0</integer>
+	<integer>655</integer>
 	<key>copyright</key>
 	<string>ETBembo designed for Edward Tufte / Graphics Press \(c\) 2002 Dmitry Krasny / Deka Design</string>
 	<key>descender</key>
-	<integer>0</integer>
+	<integer>-280</integer>
 	<key>familyName</key>
 	<string>ETBook</string>
 	<key>openTypeHeadCreated</key>
@@ -25,17 +25,29 @@
 	<key>postscriptBlueFuzz</key>
 	<integer>0</integer>
 	<key>postscriptBlueScale</key>
-	<real>0.053</real>
+	<real>0.039625</real>
 	<key>postscriptBlueShift</key>
 	<integer>7</integer>
 	<key>postscriptBlueValues</key>
-	<array/>
+	<array>
+		<integer>-15</integer>
+		<integer>0</integer>
+		<integer>418</integer>
+		<integer>430</integer>
+		<integer>655</integer>
+		<integer>667</integer>
+		<integer>721</integer>
+		<integer>739</integer>
+	</array>
 	<key>postscriptFontName</key>
 	<string>ETBook-Roman</string>
 	<key>postscriptForceBold</key>
 	<false/>
 	<key>postscriptOtherBlues</key>
-	<array/>
+	<array>
+		<integer>-280</integer>
+		<integer>-264</integer>
+	</array>
 	<key>postscriptStemSnapH</key>
 	<array>
 		<real>36.0</real>
@@ -67,6 +79,6 @@
 	<key>versionMinor</key>
 	<integer>1</integer>
 	<key>xHeight</key>
-	<integer>0</integer>
+	<integer>418</integer>
 </dict>
 </plist>
