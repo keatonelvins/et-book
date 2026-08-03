@@ -758,6 +758,52 @@
 		<string>f_f_i</string>
 		<string>f_f_l</string>
 		<string>aogonek.sc</string>
+		<string>Eogonek</string>
+		<string>eogonek</string>
+		<string>Iogonek</string>
+		<string>iogonek</string>
+		<string>Uogonek</string>
+		<string>uogonek</string>
+		<string>Hbar</string>
+		<string>hbar</string>
+		<string>cacute</string>
+		<string>Cacute</string>
+		<string>nacute</string>
+		<string>Nacute</string>
+		<string>sacute</string>
+		<string>Sacute</string>
+		<string>zacute</string>
+		<string>Zacute</string>
+		<string>ccaron</string>
+		<string>Ccaron</string>
+		<string>ecaron</string>
+		<string>Ecaron</string>
+		<string>ncaron</string>
+		<string>Ncaron</string>
+		<string>rcaron</string>
+		<string>Rcaron</string>
+		<string>zdotaccent</string>
+		<string>Zdotaccent</string>
+		<string>edotaccent</string>
+		<string>Edotaccent</string>
+		<string>umacron</string>
+		<string>Umacron</string>
+		<string>uring</string>
+		<string>Uring</string>
+		<string>ohungarumlaut</string>
+		<string>Ohungarumlaut</string>
+		<string>uhungarumlaut</string>
+		<string>Uhungarumlaut</string>
+		<string>lacute</string>
+		<string>racute</string>
+		<string>Lacute</string>
+		<string>Racute</string>
+		<string>dcaron</string>
+		<string>tcaron</string>
+		<string>lcaron</string>
+		<string>Lcaron</string>
+		<string>Dcaron</string>
+		<string>Tcaron</string>
 	</array>
 	<key>public.postscriptNames</key>
 	<dict>
