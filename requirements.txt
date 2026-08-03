@@ -1,4 +1,5 @@
-afdko==3.3.0
-fontaine==1.4.0
-fontParts==0.9.9
-ufo-extractor==0.3.0
+# Build (Makefile) also needs ttfautohint and woff2 (e.g. `brew install ttfautohint woff2`)
+afdko>=5.0
+fontaine>=1.4.0
+fontParts>=0.9.9
+ufo-extractor>=0.3.0
